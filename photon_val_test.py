@@ -112,13 +112,13 @@ def test_loop():    # testing function
 def calc_overlap(predicted, target):     # jaccard index overlap model
 
     predicted = torch.sigmoid(predicted)            # sigmoid since binary
-    predicted = (predicted >= 0.5).float()     # get bright pixels only (binary)
-    target = (target >= 0.5).float()                 # ensure target is binary
+    predicted = (predicted >= 0.5).float()
+    target = (target >= 0.5).float()                # ensure target is binary
 
     intersection = (predicted * target).sum(dim = (1, 2, 3))
     union = ((predicted + target) > 0).float().sum(dim = (1, 2, 3))
 
-    overlap = torch.where(union == 0, torch.ones_like(union), intersection / union)     # avoids div by zero
+    overlap = torch.where(union == 0, torch.ones_like(union, dtype = torch.float32), intersection.float() / union.float().clamp(1))     # avoids div by zero
     overlap = overlap.mean().item()
 
     return overlap

@@ -10,7 +10,7 @@ import photonDegrade
 import photonImage
 
 
-image = r"C:\Users\Kai\Desktop\astroAI\blackholeML\model\localize\zj74lfymz0.npz"       # image path
+image = r"C:\Users\Kai\Desktop\astroAI\blackholeML\model\localize\zxoribrgr9.npz"       # image path
 
 model = photonUNET()        # load model
 model.load_state_dict(torch.load("photon_model.pth"))       # load trained model
