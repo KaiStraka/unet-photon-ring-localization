@@ -39,7 +39,7 @@ def display_img(clean, clean_mask, degraded, degraded_mask, cmap):
     plt.subplot(1, 4, 1)        # clean image
     plt.imshow(clean, origin = "lower", cmap = cmap)
     plt.colorbar(label = "Intensity")
-    plt.title("Clean")
+    plt.title("Image")
 
     plt.subplot(1, 4, 2)        # clean mask
     plt.imshow(clean_mask, origin = "lower", cmap = cmap)

@@ -53,14 +53,14 @@ The proposed solution to this is a segmented percentile approach, where the imag
 Since this is an image segmentation / localization model, a U-Net CNN architecture was the best model logic to use. In total 13 convolutional layers are used, 6 encoder and 4 decoder layers plus 1 output layer, as well as 2 convolutional transpose layers. Each layer uses a ReLU activation function and 2x2 pooling.
 
 The ring mask prediction works using the following logic: clean simulated image -> clean ground-truth ring mask is taken -> clean image is degraded and fed into the model -> model compares the clean ground-truth masks and its corresponding degraded image -> model attempts a ring mask prediction from the degraded image -> compares predicted ring mask with the ground-truth ring mask and adjusts.\
-The GRRT<sup>[3]</sup> dataset has 3 subsets; training, validation and testing. Initial training at 20 epochs yields a ~50% prediction-truth overlap and generates near-acceptable masks. This metric is not comparable to an accuracy reading, as we are measuring binary pixel values and not a pixel gradient. Although that is the goal. Below in Fig. 5 is another example of a prediction using the 20 epoch model and logic described above.
+The GRRT<sup>[3]</sup> dataset has 3 subsets; training, validation and testing. Initial training at 20 epochs yields a ~50% prediction-truth overlap and generates near-acceptable masks. This metric is not comparable to an accuracy reading, as we are measuring overlap values of a gradient mask, instead it is more of a guideline. Below in Fig. 5 is another example of a prediction using the 20 epoch model and logic described above.
 
 <div align="center">
   <img width="1500" height="400" alt="github temp example4" src="https://github.com/user-attachments/assets/440c08b1-ff8a-41ab-aee9-8da6695cf528" />  
   <p><em>Figure 5: Full prediction example 2</em></p>
 </div>
 
-Future work includes optimization of predicted ring masks, combined predictions of n = 0, 1, 2 photon ring layers and potential parameter extraction such as black hole spin, radius, etc., among other things. Of course applications of this method on real life observed black hole images is expected in the future.
+Future work includes optimization of predicted ring masks, combined predictions of n = 0, 1, 2 photon ring layers and potential parameter extraction such as black hole spin, radius, etc., among other things. Of course applications of this method on real life observed black hole images is expected in the near future.
 
 (ALL INFORMATION IS SUBJECT TO CHANGE)
 
