@@ -1,6 +1,6 @@
 KAI STRAKA 10.2026
 
-Neural localization of n ≥ 0 photon ring structure in synthetically degraded black hole images.
+Neural localization and prediction of n ≥ 0 photon ring structure in synthetically degraded black hole images.
 
 ## <brd>
 **WORK IN PROGRESS PROJECT**
@@ -10,7 +10,7 @@ Below is brief information on current and ongoing results (all information IS su
 
 **INTRO**
 
-As of October 2026, this purpose of this project is using a U-Net CNN (convolutional neural network) architecture for localization and ring mask prediction of n ≥ 0 photon ring structures within simulated and synthetically degraded black hole images.\
+As of November 2026, the purpose of this project is using a U-Net CNN (convolutional neural network) architecture for localization and ring mask prediction of n ≥ 0 photon ring structures within simulated and synthetically degraded black hole images.\
 Below in Fig. 1 is an example of the current predicted ring mask pipeline in action.
 
 <div align="center">
