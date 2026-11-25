@@ -1,4 +1,4 @@
-KAI STRAKA 10.2026
+KAI STRAKA 11.2026
 
 Neural localization and prediction of n ≥ 0 photon ring structure in synthetically degraded black hole images.
 
